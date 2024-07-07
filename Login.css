@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+}
+
+html{
+    height: 100%;
+  }
+    
+  body {
+    direction: rtl;
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+  .container {
+    background: #fff;
+    width: 800px;
+    height: 410px;
+    padding: 25px 40px 10px 40px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: filter 0.3s ease; 
+    display: block;
+    margin: 60px auto 140px auto;
+  }
+
+.container .text {
+  text-align: center;
+  font-size: 41px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  -webkit-text-fill-color: transparent;
+}
+
+.container .form {
+  padding: 30px 0 0 0;
+}
+
+.container .form .form-row {
+  display: flex;
+  margin: 55px 0;
+  justify-content: center;
+}
+
+.form .form-row .input-data {
+  width: 100%;
+  height: 40px;
+  margin: 0 20px;
+  position: relative;
+}
+
+.input-data .d-npt{
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 17px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+}
+
+.input-data .d-npt:focus ~ .d-lbl,
+.input-data .d-npt:valid ~ .d-lbl {
+  transform: translateY(-20px);
+  font-size: 14px;
+  color: #3498db;
+}
+
+
+.input-data .d-lbl {
+  position: absolute;
+  pointer-events: none;
+  bottom: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.input-data .underline {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+}
+
+.input-data .underline:before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: #3498db;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.input-data .d-npt:focus ~ .underline:before,
+.input-data .d-npt:valid ~ .underline:before{
+  transform: scale(1);
+}
+
+.submit-btn .input-data {
+  overflow: hidden;
+  height: 45px!important;
+  width: 25%!important;
+  border-radius: 5px;
+}
+
+.submit-btn .input-data .inner {
+  height: 100%;
+  width: 300%;
+  position: absolute;
+  left: -100%;
+  background: -webkit-linear-gradient(right, #1778C2, #1067aa, #64b2ee, #1778C2);
+  transition: all 0.4s;
+}
+
+.submit-btn .input-data:hover .inner {
+  left: 0;
+}
+
+.submit-btn .input-data .d-npt{
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.underline-text {
+  cursor: pointer;
+  color: #3498db;
+  display: inline-block;
+  padding: 5px; 
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  /* margin-top: 160px; */
+  margin-top: auto;
+  padding: 20px;
+  background-color: #01579B;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  border-top: 1px solid #e7e7e7;
+  color: #ffffff;
+  width: 100%;
+}
+
+.header{
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #01579B;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.headerImg {
+  width: 69px;
+  height: 78px;
+  margin-right: 15px;
+}
+
+
+  @media (max-width: 700px) {
+    .loginH{
+      position: relative;
+      top: 35px;
+    }
+
+    .container {
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .form .form-row {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .form .form-row .input-data {
+      margin: 15px 0; 
+    }
+  
+    .submit-btn .input-data {
+      width: 100%; 
+      margin-top: 20px; 
+    }
+  
+    .footer {
+      font-size: 14px; 
+      /* margin-top: 10px; */
+    }
+    
+    .header {
+      flex-direction: column; 
+      align-items: center;
+    }
+  
+    .headerImg {
+      width: 50px; 
+      height: 60px; 
+      margin-right: 0; 
+    }
+
+    #saveBtn {
+      position: relative;
+      bottom: 40px;
+    }
+  }
+
+.form .form-row .form-select:focus ~ .underline:before,
+.form .form-row .form-select:valid ~ .underline:before {
+  transform: scaleX(1);
+}
+
+#saveBtn{
+  margin: 0 auto;
+}
